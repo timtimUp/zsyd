@@ -109,14 +109,9 @@
 		</div>
 		<script>
 			$(function() {
-				//banner图片的长宽比
-				var banImgRate = 760 / 534;
-				var imgWidth = $(".banner_box").width();
-				var imgheigth = imgWidth / banImgRate;
-				$(".banner_box").height(imgheigth);
 				//获取点击菜单图片宽度
 				var iconWidth = $(".hot_link img").width();
-				var marginTop = -(iconWidth / 2 + 5);
+				var marginTop = -(iconWidth / 2+11);
 				$(".menu_box").css("margin-top", marginTop);
 			})
 		</script>
