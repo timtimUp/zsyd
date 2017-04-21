@@ -383,6 +383,10 @@ input.yb_btn_plain_default {
 }
 .div_box a:active{
 	background-color: #d1f0ff;
+	opacity: 0.2;
+	-moz-opacity: 0.2;
+	-webkit-opacity: 0.2;
+	fill-opacity: 0.2;
 }
 .menu_box img{
 	width: 100%;
@@ -1424,17 +1428,88 @@ span[class^="btn_"]{
 	margin:0 auto;
 }
 .hzhb_title{
+	color: rgb(2,152,239);
 	height: 30px;
 	background: url(../img/hZTitleBg.png) no-repeat top left;
 	background-size:100% 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    display: box;
+    display: flexbox;
+    -webkit-box-align: center;
+    -webkit-align-items: flex-end;
+    -ms-flex-align: flex-end;
+    align-items: flex-end;
+}
+.hzhb_title span{
+	margin-left: 10%;
+    font-size: 1.1em;
 }
 .hzhb_content{
 	background: url(../img/contentBg.jpg) repeat-y;
 	background-size:100% 100%;
+	padding-top: 15px;
+}
+.hzhb_content_inner{
+	width:95%;
+	margin: 0 auto;
+}
+.hzhb_content_inner .insBlock{
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+	border-bottom: 1px dashed rgb(237,237,237);
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+}
+.hzhb_content_inner .insBlock:last-child{
+	border-bottom:none;
+	margin-bottom: 0;
+}
+.hzhb_content_inner .insLeft{
+    -webkit-box-flex: 0.3;
+    -moz-box-flex: 0.3;
+    -webkit-flex: 0.3;
+    -ms-flex: 0.3;
+    flex: 0.3;
+	text-align: center;
+	display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    display: box;
+    display: flexbox;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.hzhb_content_inner .insLeft img{
+	width:100%;
+}
+.hzhb_content_inner .insRig{
+    -webkit-box-flex: 0.7;
+    -moz-box-flex: 0.7;
+    -webkit-flex: 0.7;
+    -ms-flex: 0.7;
+    flex: 0.7;
+    padding: 0 8px;
+	border-left: 2px solid rgb(218,214,214);
+}
+.hzhb_content_inner .insRig span{
+    font-size:1em;
+    line-height: 0px;
+    color: rgb(141,141,141);
 }
 .hzhb_bottom{
-	height: 3px;
-	background: url(../img/contentBtBg.jpg)no-repeat;
+	height: 14px;
+	background: url(../img/contentBt.jpg) no-repeat;
 	background-size:100% 100%;
 }
 /*合作伙伴 end*/
@@ -5313,22 +5388,17 @@ input[type="search"]::-webkit-search-results-decoration {
 
 
 /* * * 选择保险公司（新页面）  * * */
-.insurance_company_new{
-}
+
 .ic_item_new {
+	display: block;
     position: relative;
     margin: 10px 2%;
     width: 46%;
-    min-height:190px;
     float:left;
-    border: solid 1px #D9D9D9;
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    background-color: #FFF;
-    -webkit-box-shadow: 1px 1px 2px #cccccc;
-    box-shadow: 1px 1px 2px #cccccc;
+    padding: 0 3px;
+    overflow: hidden;
 }
-.ic_item_new:before {
+/*.ic_item_new:before {
     content: " ";
     position: absolute;
     left: 0;
@@ -5340,7 +5410,7 @@ input[type="search"]::-webkit-search-results-decoration {
     -webkit-border-top-left-radius: 4px;
     -webkit-border-top-right-radius: 4px;
     background-color: #76b607;
-}
+}*/
 .ic_item_btn_new a {
     display: inline-block;
     width: 110px;
@@ -5349,17 +5419,41 @@ input[type="search"]::-webkit-search-results-decoration {
     background-size: cover;
     margin-bottom: -10px;
 }
-.ic_item_btn_new a:active{
-	opacity: 0.7;
+.ic_item_new:active{
+	opacity: 0.5;
+	fill-opacity: 0.5;
+	-moz-opacity: 0.5;
+	-webkit-opacity: 0.5;
+}
+.ic_item_logo_wrap{
+	height: 45%;
+	min-height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    display: box;
+    display: flexbox;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
 }
 .ic_item_logo_new{
-	width: 70px;
-    height: 70px;
+	width: 75px;
+    height: 75px;
     border: solid 1px #d1d1d1;
     border-radius: 50%;
     -webkit-border-radius: 50%;
-    margin: 10px auto 10px;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    text-align: center;
 }
 .ic_item_logo_new img{
 	width: 68px;
@@ -5371,21 +5465,45 @@ input[type="search"]::-webkit-search-results-decoration {
     -webkit-flex: 1;
     -ms-flex: 1;
     flex: 1;
+    text-align: center;
+    height: 19%;
+    display: -webkit-box; 
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex; 
+    display: box;
+    display: flexbox;
+    -webkit-box-align: center; 
+    -webkit-align-items: center; 
+    -ms-flex-align: center;
+    align-items: center;
+    justify-content: center;
 }
-.ic_item_txt_new div{
+.ic_item_txt_new:active{
+	opacity: ;
+}    
+    
+.ic_item_txt_new span{
+	color: rgb(36,36,36);
 	font-size: 15px;
 	font-weight: bold;
-	padding-top: 15px;
-	text-align: center;
+	/*解决safari不支持justify-content*/
+	-webkit-flex:1;
+    -webkit-box-flex: 1;
+    flex: 1;
 }
-.ic_item_txt_new p{
-	font-size: 12px;
-	color: #666666;
-	padding-bottom: 5px;
+.ic_item_txt_des{
+	padding:0 0 0 4%;
+	overflow: hidden;
+}
+.ic_item_txt_des p{
+	font-size: 0.8em;
+	color: rgb(154,154,154);
 	position: relative;
-	padding-left: 10px;
+	padding: 0 0 5px 6%;
 }
-.ic_item_txt_new p:nth-child(2){
+/*.ic_item_txt_new p:nth-child(2){
 	font-size: 12px;
 	color: #666666;
 	padding-bottom: 5px;
@@ -5398,15 +5516,15 @@ input[type="search"]::-webkit-search-results-decoration {
     -webkit-box-orient: vertical;
     height:34px;
     overflow: hidden;
-}
-.ic_item_txt_new p:before{
+}*/
+.ic_item_txt_des p:before{
 	content: " ";
     position: absolute;
     left: 4px;
     top: 5px;
     width: 4px;
     height: 4px;
-    background-color: #ccc;
+    background-color:rgb(142,142,142);
 }
 .discount_bg{
 	width: 92%;
@@ -5438,7 +5556,7 @@ input[type="search"]::-webkit-search-results-decoration {
     justify-content: center;*/
 }
 
-.insurance_company_new .ic_item_new:nth-child(6n-5):before{
+/*.insurance_company_new .ic_item_new:nth-child(6n-5):before{
 	background-color: #0abf81;
 }
 .insurance_company_new .ic_item_new:nth-child(6n-4):before{
@@ -5455,8 +5573,24 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 .insurance_company_new .ic_item_new:nth-child(6n):before{
 	background-color: #76b607;
+}*/
+.redBg{
+	background: url(../img/cxtbBg1.png) no-repeat center center;
+	background-size: 100% 100%;
 }
-
+.orgBg{
+	background: url(../img/cxtbBg2.png) no-repeat center center;
+	background-size: 100% 100%;
+}
+.bluBg{
+	background: url(../img/cxtbBg3.png) no-repeat center center;
+	background-size: 100% 100%;
+}
+.dblueBg{
+	background: url(../img/cxtbBg4.png) no-repeat center center;
+	background-size: 100% 100%;
+}
+/* * * 选择保险公司 end  * * */
 
 /*健康100 start*/
 .hundred_healty{

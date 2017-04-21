@@ -16,10 +16,10 @@
 		<link href="css/style.css" rel="stylesheet">
 		<script type="text/javascript" src="js/jquery.min.js"></script>
 		<script type="text/javascript" src="js/jweixin-1.0.0.js"></script>
-		<script type="text/javascript" src="js/weixin.js"></script>
+		<!--<script type="text/javascript" src="js/weixin.js"></script>-->
 	</head>
 
-	<body style="background: #FFFFFF;">
+	<body style="background: #FFFFFF;" ontouchstart="" onmouseover="">
 		<div class="container">
 			<div class="yb_row" style="top:0;">
 				<div class="index_header">
@@ -60,26 +60,49 @@
 							</div>
 						</div>
 					</div>
-					
+
 					<div class="hzhb">
 						<div class="hzhb_title">
-							
+							<span>合作伙伴</span>
 						</div>
 						<div class="hzhb_content">
 							<div class="hzhb_content_inner">
 								<div class="insBlock">
 									<div class="insLeft">
-									    
+										<img src="img/rbIcon.jpg" />
 									</div>
 									<div class="insRig">
-									
+										<span>中国财险龙头老大，世界500强，亚洲第一，全球第二，为全国三分之一以上的机动车客户提供专业车险服务。</span>
 									</div>
 								</div>
-								
+								<div class="insBlock">
+									<div class="insLeft">
+										<img src="img/paIcon.jpg" />
+									</div>
+									<div class="insRig">
+										<span>中国第一家股份制保险企业，平安产险为中国第二大产险公司，成立于1988年，总部设在深圳蛇口。</span>
+									</div>
+								</div>
+								<div class="insBlock">
+									<div class="insLeft">
+										<img src="img/taIcon.jpg" />
+									</div>
+									<div class="insRig">
+										<span>中国首家由企业出资组建的股份制商业保险公司和国内第四家财产保险公司，成立于1995年，总部设在上海浦东。</span>
+									</div>
+								</div>
+								<div class="insBlock">
+									<div class="insLeft">
+										<img src="img/xdIcon.jpg" />
+									</div>
+									<div class="insRig">
+										<span>深圳市政府入主成为控股股东，有望打造财险新力军。成立于2009年，总部设在北京。</span>
+									</div>
+								</div>
 							</div>
 						</div>
 						<div class="hzhb_bottom">
-							
+
 						</div>
 					</div>
 				</div>
@@ -87,7 +110,7 @@
 			<div class="frame-footer">
 				<div class="footer_box">
 					<div class="menu_item">
-						<a href="/index.html" id="home_a" class="on">
+						<a href="index.html" id="home_a" class="on">
 							<i class="nav01"></i>
 							<p>首页</p>
 						</a>
@@ -101,7 +124,7 @@
 					<div class="menu_item">
 						<a href="#">
 							<i class="nav03"></i>
-							<p>消息中心</p>
+							<p>个人中心</p>
 						</a>
 					</div>
 				</div>
@@ -111,7 +134,7 @@
 			$(function() {
 				//获取点击菜单图片宽度
 				var iconWidth = $(".hot_link img").width();
-				var marginTop = -(iconWidth / 2+11);
+				var marginTop = -(iconWidth / 2 + 11);
 				$(".menu_box").css("margin-top", marginTop);
 			})
 		</script>

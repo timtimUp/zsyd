@@ -16,25 +16,88 @@
 		<link href="css/style.css" rel="stylesheet">
 		<script type="text/javascript" src="js/jquery.min.js"></script>
 		<script type="text/javascript" src="js/jweixin-1.0.0.js"></script>
-		<script type="text/javascript" src="js/weixin.js"></script>
+		<!--<script type="text/javascript" src="js/weixin.js"></script>-->
 	</head>
 
-	<body>
+	<body ontouchstart="" onmouseover="">
 		<div class="container">
-			<div class="yb_row" style="top:0;">
-                 <div class="index_header">
-                 	<div class="logo_box">
-                 		
-                 	</div>
-                 	<div class="index_title">
-                 		
-                 	</div>
-                 </div>
+			<div class="header_box">
+				<div class="header_box_inner">
+					<div class="header_left">
+						<a href="index.html"><i class="ico_back"></i></a>
+					</div>
+					<div class="header_middle">
+						<a href="###">选择保险公司</a>
+					</div>
+					<div class="header_right">
+						<a href="###"><i class=""></i></a>
+					</div>
+				</div>
+			</div>
+			<div class="yb_row">
+				<div class="insurance_company_new">
+					<a class="ic_item_new redBg">
+						<div class="ic_item_txt_new">
+							<span>车险投保</span>
+						</div>
+						<div class="ic_item_logo_wrap">
+							<div class="ic_item_logo_new">
+								<img src="img/rbIcon.jpg">
+							</div>
+						</div>
+						<div class="ic_item_txt_des">
+							<p>车险包含商业险和交强险</p>
+							<p>支持家庭自用车辆投保</p>
+						</div>
+					</a>
+					<a class="ic_item_new orgBg">
+						<div class="ic_item_txt_new">
+							<span>车险投保</span>
+						</div>
+						<div class="ic_item_logo_wrap">
+							<div class="ic_item_logo_new">
+								<img src="img/paIcon.jpg">
+							</div>
+						</div>
+						<div class="ic_item_txt_des">
+							<p>车险包含商业险和交强险</p>
+							<p>支持家庭自用车辆投保</p>
+						</div>
+					</a>
+					<a class="ic_item_new bluBg">
+						<div class="ic_item_txt_new">
+							<span>车险投保</span>
+						</div>
+						<div class="ic_item_logo_wrap">
+							<div class="ic_item_logo_new">
+								<img src="img/taIcon.jpg">
+							</div>
+						</div>
+						<div class="ic_item_txt_des">
+							<p>车险包含商业险和交强险</p>
+							<p>支持家庭自用车辆投保</p>
+						</div>
+					</a>
+					<a class="ic_item_new dblueBg">
+						<div class="ic_item_txt_new">
+							<span>车险投保</span>
+						</div>
+						<div class="ic_item_logo_wrap">
+							<div class="ic_item_logo_new">
+								<img src="img/xdIcon.jpg">
+							</div>
+						</div>
+						<div class="ic_item_txt_des">
+							<p>车险包含商业险和交强险</p>
+							<p>支持家庭自用车辆投保</p>
+						</div>
+					</a>
+				</div>
 			</div>
 			<div class="frame-footer">
 				<div class="footer_box">
 					<div class="menu_item">
-						<a href="/index.html" id="home_a" class="on">
+						<a href="index.html" id="home_a" class="on">
 							<i class="nav01"></i>
 							<p>首页</p>
 						</a>
@@ -48,12 +111,22 @@
 					<div class="menu_item">
 						<a href="#">
 							<i class="nav03"></i>
-							<p>消息中心</p>
+							<p>个人中心</p>
 						</a>
 					</div>
 				</div>
 			</div>
 		</div>
+		<script>
+			$(function() {
+				//控制保险列表项高度
+				var insItemWid = $(".ic_item_new").width();
+				var rate = 230 / 303;
+				var insItem = $(".ic_item_new");
+				insItemHeig = insItemWid / rate + 40;
+				insItem.css("height", insItemHeig);
+			})
+		</script>
 	</body>
 
 </html>
